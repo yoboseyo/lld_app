@@ -1,0 +1,46 @@
+{
+    "common_path": "../../../../../../models/face_model/",
+    "model_key_set" : 
+    [
+        "eye_close_verifier",
+        "face_preprocessor_4_action_verifier"
+    ],
+
+    "eye_close_verifier": {
+        "type" : "eye_close_verifier",
+        "config" : {
+            "model_key_set" : [ "eye_close_expression", "eye_open_expression"],
+            "eye_close_expression" : {
+                "type": "eye_close_expression",
+                "config" : {
+                    "config_path" : "./f_attr/b_e_c.json"
+                }
+            },
+            "eye_open_expression" : {
+                "type": "eye_open_expression",
+                "config" : {
+                    "config_path" : "./f_attr/b_e_o.json"
+                }
+            }
+        }
+    },    
+
+    "face_preprocessor_4_action_verifier" : {
+        "type" : "face_preprocessor_4_action_verifier",
+        "config": {
+            "model_key_set" : ["face_detector_with_alignment", "face_normalizer"],
+            "face_detector_with_alignment" : {
+                "type" : "face_detector_with_alignment",
+                "config" : {
+                    "config_path" : "./m/detalign_android_F.json"
+                }
+            },
+            "face_normalizer" : {
+                "type" : "face_normalizer",
+                "config" : {
+                    "config_path" : "./m/pose_estiomation_su_ave_16.json"
+                }
+            }
+        }
+    }
+}

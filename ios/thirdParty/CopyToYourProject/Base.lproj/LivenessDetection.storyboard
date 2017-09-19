@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Oliveapp Liveness Detection View Controller-->
+        <scene sceneID="f1N-AV-oYI">
+            <objects>
+                <viewController storyboardIdentifier="LivenessDetectionStoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yzc-Vi-QUf" customClass="OliveappLivenessDetectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ZT-YB-x7o"/>
+                        <viewControllerLayoutGuide type="bottom" id="mAp-kM-ZtJ"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="85C-KL-RPe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="EZs-cc-W1t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oliveapp_background_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="IuJ-Kk-mF8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR1-Ou-0iW">
+                                <rect key="frame" x="335" y="35" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IR1-Ou-0iW" secondAttribute="height" multiplier="1:1" id="jOt-6v-q6o"/>
+                                    <constraint firstAttribute="height" constant="25" id="oWy-uL-3qh"/>
+                                </constraints>
+                                <state key="normal" image="oliveapp_close_icon.png"/>
+                                <connections>
+                                    <action selector="onCancelClicked:" destination="yzc-Vi-QUf" eventType="touchUpInside" id="bu5-7Y-RCT"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oliveapp_word_blink.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKs-BZ-s8A">
+                                <rect key="frame" x="139.5" y="90" width="96" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42.5" id="4OZ-0s-Wc0"/>
+                                    <constraint firstAttribute="width" constant="96" id="vNW-0b-bts"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFw-8u-Iey">
+                                <rect key="frame" x="187.5" y="333.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帧率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uf7-8K-4or">
+                                <rect key="frame" x="16" y="20" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uf7-8K-4or" firstAttribute="top" secondItem="9ZT-YB-x7o" secondAttribute="bottom" id="31t-6j-HIF"/>
+                            <constraint firstItem="NFw-8u-Iey" firstAttribute="centerX" secondItem="85C-KL-RPe" secondAttribute="centerX" id="3Ld-0e-aBA"/>
+                            <constraint firstItem="IuJ-Kk-mF8" firstAttribute="height" secondItem="85C-KL-RPe" secondAttribute="height" id="48y-QZ-Uxl"/>
+                            <constraint firstItem="EZs-cc-W1t" firstAttribute="width" secondItem="85C-KL-RPe" secondAttribute="width" id="G0r-Dd-0ZA"/>
+                            <constraint firstItem="IuJ-Kk-mF8" firstAttribute="centerY" secondItem="85C-KL-RPe" secondAttribute="centerY" id="Mln-8Y-yFU"/>
+                            <constraint firstItem="sKs-BZ-s8A" firstAttribute="top" secondItem="9ZT-YB-x7o" secondAttribute="bottom" constant="70" id="Q1U-br-32u"/>
+                            <constraint firstItem="EZs-cc-W1t" firstAttribute="height" secondItem="85C-KL-RPe" secondAttribute="height" id="RNv-L9-M1b"/>
+                            <constraint firstAttribute="trailing" secondItem="IR1-Ou-0iW" secondAttribute="trailing" constant="15" id="ROw-JM-q7A"/>
+                            <constraint firstItem="EZs-cc-W1t" firstAttribute="centerY" secondItem="85C-KL-RPe" secondAttribute="centerY" id="YE3-ID-yBP"/>
+                            <constraint firstItem="sKs-BZ-s8A" firstAttribute="centerX" secondItem="85C-KL-RPe" secondAttribute="centerX" id="ZGt-i7-sU9"/>
+                            <constraint firstItem="NFw-8u-Iey" firstAttribute="centerY" secondItem="85C-KL-RPe" secondAttribute="centerY" id="cfM-g3-rt5"/>
+                            <constraint firstItem="IuJ-Kk-mF8" firstAttribute="centerX" secondItem="85C-KL-RPe" secondAttribute="centerX" id="e0Z-Vv-SMv"/>
+                            <constraint firstItem="EZs-cc-W1t" firstAttribute="centerX" secondItem="85C-KL-RPe" secondAttribute="centerX" id="mgk-UW-tcp"/>
+                            <constraint firstItem="IR1-Ou-0iW" firstAttribute="top" secondItem="9ZT-YB-x7o" secondAttribute="bottom" constant="15" id="rTS-Zd-VZl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Uf7-8K-4or" secondAttribute="leading" id="wE3-6a-M1k"/>
+                            <constraint firstItem="IuJ-Kk-mF8" firstAttribute="width" secondItem="85C-KL-RPe" secondAttribute="width" id="xtV-x9-2Yh"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="EZs-cc-W1t"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mBackgroundImageView" destination="IuJ-Kk-mF8" id="oCX-7p-4A7"/>
+                        <outlet property="mCameraPreview" destination="EZs-cc-W1t" id="OWf-2l-NZ3"/>
+                        <outlet property="mFrameLabel" destination="Uf7-8K-4or" id="Ryi-BF-BJN"/>
+                        <outlet property="mStepHintTextLabel" destination="NFw-8u-Iey" id="ABh-7S-1Ac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPJ-hn-gYH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="47.226386806596707"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="oliveapp_background_normal.png" width="750" height="1334"/>
+        <image name="oliveapp_close_icon.png" width="35" height="35"/>
+        <image name="oliveapp_word_blink.png" width="202" height="75"/>
+    </resources>
+</document>
